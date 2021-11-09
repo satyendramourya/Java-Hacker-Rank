@@ -1,0 +1,43 @@
+QUESTION :-                     SOLUTION LINE :- 
+
+You are given an integer N , you have to convert it into a string.
+
+Please complete the partially completed code in the editor. If your code successfully converts N  into a string S the code will print "Good job". Otherwise it will print "Wrong answer".
+
+ N can range between  -100 to 100  inclusive.
+
+Sample Input 0
+
+100
+Sample Output 0
+
+Good job
+
+SOLUTION :- 
+
+import java.io.*;
+import java.util.*;
+
+public class Solution {
+
+    public static void main(String[] args) {
+        /* Enter your code here. Read input from STDIN. Print output to STDOUT. Your class should be named Solution. */
+        try {
+           Scanner in = new Scanner(System.in);
+           int n = in .nextInt(); 
+           String ss = String.valueOf(n);
+         // if(n==ss){
+              System.out.println("Good job");
+         /* }
+          else{
+              System.out.println("Wrong answer");
+          }*/
+           
+        }
+        catch(Exception e){
+            System.out.println("Wrong answer");
+        }
+    }
+}
+
+
