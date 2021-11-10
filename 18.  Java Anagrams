@@ -1,0 +1,43 @@
+QUESTION :- hackerrank.com/challenges/java-anagrams/problem                       SOLUTION LINE :- 4
+
+
+SOLUTION :-
+
+import java.io.*;
+import java.util.*;
+
+public class Solution {
+    
+    public static void anagrams(String a, String b ){
+       boolean status = true;                                                           // setting the true value
+       
+        if ( a.length()!= b.length())                                                   // checking the length 
+        System.out.println("Not Anagrams");
+        
+        //if the length is equale
+        else if  ( a.length()== b.length()) {
+            char a1[] = a.toLowerCase().toCharArray();
+            char b2[]= b.toLowerCase().toCharArray();
+            Arrays.sort(a1);
+            Arrays.sort(b2);
+           
+             status =Arrays.equals(a1, b2);  
+           
+           if(  status == true )                                                               //checking the condition
+        System.out.println("Anagrams");
+        else System.out.println("Not Anagrams");
+           
+        }
+        
+    }
+
+    public static void main(String[] args) {
+        /* Enter your code here. Read input from STDIN. Print output to STDOUT. Your class should be named Solution. */
+        Scanner sc = new Scanner(System.in);                                                             
+        String a = sc.nextLine();                                                                   // TAKING INPUTS
+        String b = sc.nextLine();
+        anagrams(a,b);                                                                              // CALING THE anagrams AND PASSING THE VALUE
+        
+        
+    }
+}
